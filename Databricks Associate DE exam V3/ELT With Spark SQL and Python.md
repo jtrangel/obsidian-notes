@@ -1,3 +1,5 @@
+&copy [Rangel](https://github.com/jtrangel)
+
 For the `${var}` syntaxing, refer to Databricks widgets, which is a way to register and use parameters in the SQL context. [[1](https://docs.databricks.com/en/notebooks/widgets.html)] Similarly we can invoke regular python variables for use with PySpark.
 
 1. Extract data from a single file and from a directory of files. [[1](https://docs.databricks.com/en/files/index.html)] 
@@ -26,6 +28,7 @@ For the `${var}` syntaxing, refer to Databricks widgets, which is a way to regis
 	WITH cte AS(
 	  SELECT * FROM json.`${path}`
 	)
+	SELECT col1, col2 FROM cte
 	```
 4. Identify that tables from external sources are not Delta Lake tables. [[1](https://docs.databricks.com/en/sql/language-manual/sql-ref-external-tables.html)] 
 	- External tables by default are not supported by Delta format
@@ -163,3 +166,5 @@ For the `${var}` syntaxing, refer to Databricks widgets, which is a way to regis
 28. Leverage CASE/WHEN for custom control flow.
 	- Usable in SELECT clause
 	- Can define CASE WHEN statement inside UDF
+
+

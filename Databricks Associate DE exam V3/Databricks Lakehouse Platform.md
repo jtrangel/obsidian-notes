@@ -1,3 +1,5 @@
+&copy [Rangel](https://github.com/jtrangel)
+
 1. Describe the relationship between the data lakehouse and the data warehouse. [[1](https://docs.databricks.com/en/lakehouse/)] 
 	- Lakehouse = ACID and Governance of warehouses + flexibility (schema on read) and cost efficiency of lakes
 	- Same data for ETL/ELT/processing and for training ML models and BI use cases
