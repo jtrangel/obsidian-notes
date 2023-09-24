@@ -8,13 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "357a97aaa37a8848",
+            "id": "b74e1a4d51093ac0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
+                "file": "Databricks Associate DE exam V3/ELT With Spark SQL and Python.md",
                 "mode": "source",
+                "source": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "f5a3ee2f26f8728c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f764d92a5f7b7531",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Databricks Associate DE exam V3/ELT With Spark SQL and Python.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
+                "file": "Databricks Associate DE exam V3/ELT With Spark SQL and Python.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
+                "file": "Databricks Associate DE exam V3/ELT With Spark SQL and Python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,12 +143,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md"
+                "file": "Databricks Associate DE exam V3/ELT With Spark SQL and Python.md"
               }
             }
           },
           {
-            "id": "412d4714f5228ac6",
+            "id": "e1a2289fa225970b",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -142,7 +160,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 262.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -155,15 +173,17 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "357a97aaa37a8848",
+  "active": "f764d92a5f7b7531",
   "lastOpenFiles": [
-    "README.md",
     "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
-    "Databricks Associate DE exam V3/Exam outline.md",
-    "Databricks Associate DE exam V3/Incremental Data Processing.md",
     "Databricks Associate DE exam V3/Data Governance.md",
     "Databricks Associate DE exam V3/Production Pipelines.md",
+    "Databricks Associate DE exam V3/Incremental Data Processing.md",
     "Databricks Associate DE exam V3/ELT With Spark SQL and Python.md",
+    "Databricks Associate DE exam V3/Exam outline.md",
+    "Daily notes/2023-09-24.md",
+    "Daily notes",
+    "README.md",
     "Databricks Associate DE exam V3"
   ]
 }
