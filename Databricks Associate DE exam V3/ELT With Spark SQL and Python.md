@@ -147,7 +147,16 @@ For the `${var}` syntaxing, refer to Databricks widgets, which is a way to regis
 	DESCRIBE FUNCTION EXTENDED sale_announcement
 	```
 26. Describe the security model for sharing SQL UDFs. [[1](https://www.databricks.com/blog/2021/10/20/introducing-sql-user-defined-functions.html), [2](https://docs.databricks.com/en/udf/unity-catalog.html)]
-	<br />
+	- Security model follows that of Unity Catalog and Delta Sharing
+	- SQL SECURITY `DEFINER` option for allowing access to use function via authorization of the function owner. 
+	```SQL
+	CREATE OR REPLACE FUNCTION 
+	    from_rgb(rgb STRING COMMENT 'an RGB hex color code') 
+    RETURNS TABLE(name STRING COMMENT 'color name')
+    READS SQL DATA SQL SECURITY DEFINER
+    COMMENT 'Translates an RGB color code into a color name'
+    RETURN SELECT name FROM colors WHERE rgb = from_rgb.rgb;
+	```
 27. Use CASE/WHEN in SQL code.
 	- IF/ELSE but in SELECT clause
 	<br />
