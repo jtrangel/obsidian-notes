@@ -1,4 +1,5 @@
 &copy [Rangel](https://github.com/jtrangel)
+
 ## Data Pipelines with Delta Live Tables
 
 ● Identify the components necessary to create a new DLT pipeline.
