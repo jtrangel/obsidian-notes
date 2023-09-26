@@ -1,5 +1,8 @@
 &copy [Rangel](https://github.com/jtrangel)
+
 ## Data Management with Delta Lake
+
+This section on Delta Lake overlaps with [[ELT With Spark SQL and Python]].
 
 1. Identify where Delta Lake provides ACID transactions. [1](https://docs.databricks.com/en/lakehouse/acid.html)
 	- Transactions are at the table level, one table at a time
@@ -82,13 +85,13 @@
 	# Rollback 
 	RESTORE TABLE students TO VERSION AS OF 8
 	```
-16. Identify why Zordering is beneficial to Delta Lake tables.
+15. Identify why Zordering is beneficial to Delta Lake tables.
 	- z-ordering = indexing
 	```SQL
 	OPTIMIZE students
 	ZORDER BY id
 	```
-17. Identify how vacuum commits deletes.
+16. Identify how vacuum commits deletes.
 	- VACUUM deletes old versions of a table (the snappy parquet files)
 	- does not delete the delta log, so we can still see the history of the table via `DESCRIBE HISTORY`
 	```SQL
@@ -102,31 +105,86 @@
 	```SQL
 	VACUUM students RETAIN 0 HOURS
 	```
-18. Identify the kind of files Optimize compacts. [1](https://docs.gcp.databricks.com/sql/language-manual/delta-optimize.html)
+17. Identify the kind of files Optimize compacts. [1](https://docs.gcp.databricks.com/sql/language-manual/delta-optimize.html)
 	- small files are compacted and balanced out (combined towards an optimal size, determined by table size)
 	- idempotent process
 	<br />
-19. Identify CTAS as a solution.
+18. Identify CTAS (`CREATE TABLE AS SELECT`) as a solution.
+	- autoinfer schema from input
+	- does not support `OPTIONS`  for csvs
+		- you will need to use temp views first with options, then reference the view in CTAS
+		- `CREATE OR REPLACE TEMP VIEW.... USING CSV ... OPTIONS...`
+	<br />
+19. Create a generated column.
+	- column made from another column (lateral referencing)
+	- when inserting into table w/ generated column via values, the value needs to be correct/consistent with the generation equation
+	<br />
+20. Add a table comment.
+	- either in column, or for whole table
+	```SQL
+	CREATE OR REPLACE TABLE purchase_dates (
+		id STRING,
+		transaction_timestamp STRING,
+		price STRING,
+		date DATE GENERATED ALWAYS AS (
+		cast(cast(transaction_timestamp/1e6 AS TIMESTAMP) AS DATE))
+		COMMENT "generated based on `transactions_timestamp` column")
+	```
 
-● Create a generated column.
+	```SQL
+	CREATE OR REPLACE TABLE users_pii
+	COMMENT "Contains PII"
+	LOCATION "${da.paths.working_dir}/tmp/users_pii"
+	PARTITIONED BY (first_touch_date)
+	AS
+		SELECT *,
+		cast(cast(user_first_touch_timestamp/1e6 AS TIMESTAMP) AS DATE) first_touch_date,
+		current_timestamp() updated,
+		input_file_name() source_file
+		FROM parquet.`${da.paths.datasets}/ecommerce/raw/users-historical/`;
+	```
+21. Use CREATE OR REPLACE TABLE and INSERT OVERWRITE
+	- CRAS options:
+		- COMMENT `comment`
+		- LOCATION `location`
+		- PARTITION BY `column\s`
+		- DEEP CLONE - full copy of data and metadata
+		- SHALLOW CLONE - metadata only (delta log)
+		- CRAS old table still exists via delta time travel
+	```SQL
+	CREATE OR REPLACE TABLE events AS
+	SELECT * FROM parquet.`${da.paths.datasets}/ecommerce/raw/events-historical`
+	
+	
+	INSERT OVERWRITE sales
+	SELECT * FROM parquet.`${da.paths.datasets}/ecommerce/raw/sales-historical/`
+	```
 
-● Add a table comment.
-
-● Use CREATE OR REPLACE TABLE and INSERT OVERWRITE
-
-● Compare and contrast CREATE OR REPLACE TABLE and INSERT OVERWRITE
-
-● Identify a scenario in which MERGE should be used.
-
-● Identify MERGE as a command to deduplicate data upon writing.
-
-● Describe the benefits of the MERGE command.
-
-● Identify why a COPY INTO statement is not duplicating data in the target table.
-
-● Identify a scenario in which COPY INTO should be used.
-
-● Use COPY INTO to insert data.
+22. Compare and contrast CREATE OR REPLACE TABLE and INSERT OVERWRITE
+	- INSERT OVERWRITE 
+		- can only work on existing tables
+		- only works when schema to insert is correct (matches target table). this is due to delta's schema on write policy
+		- can overwrite individual partitions
+	<br />
+23. Identify a scenario in which MERGE should be used.
+	- when you need to upsert in a single transaction
+24. Identify MERGE as a command to deduplicate data upon writing.
+	- only INSERT data, WHEN NOT MATCHED
+25. Describe the benefits of the MERGE command.
+	- custom logic
+	- combine update, insert, and delete as single transaction
+	<br />
+26. Identify why a COPY INTO statement is not duplicating data in the target table.
+	- COPY INTO is idempotent as compared to INSERT INTO, which just appends per use
+	- COPY INTO uses a directory/file path, while INSERT INTO uses a query
+27. Identify a scenario in which COPY INTO should be used.
+	- for incrementally loading data into a table FROM a source that continuously receives data
+28. Use COPY INTO to insert data.
+	```SQL
+	COPY INTO sales
+	FROM "${da.paths.datasets}/ecommerce/raw/sales-30m"
+	FILEFORMAT = PARQUET
+	```
 
 ## Data Access with Unity Catalog
 
