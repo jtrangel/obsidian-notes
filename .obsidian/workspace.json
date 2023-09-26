@@ -160,7 +160,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 226.5
+    "width": 414.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -174,7 +174,7 @@
       "obsidian-statusbar-pomo:Start pomodoro": false
     }
   },
-  "active": "b74e1a4d51093ac0",
+  "active": "e1a2289fa225970b",
   "lastOpenFiles": [
     "Data Governance.pdf",
     "Daily notes/2023-09-26.md",
