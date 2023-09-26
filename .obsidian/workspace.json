@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Daily notes/2023-09-24.md",
+                "file": "Daily notes/2023-09-26.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily notes/2023-09-24.md",
+                "file": "Daily notes/2023-09-26.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily notes/2023-09-24.md",
+                "file": "Daily notes/2023-09-26.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily notes/2023-09-24.md"
+                "file": "Daily notes/2023-09-26.md"
               }
             }
           },
@@ -160,7 +160,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 787.5
+    "width": 226.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -176,15 +176,16 @@
   },
   "active": "b74e1a4d51093ac0",
   "lastOpenFiles": [
-    "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
-    "Databricks Associate DE exam V3/Data Governance.md",
     "Data Governance.pdf",
+    "Daily notes/2023-09-26.md",
+    "Daily notes/2023-09-24.md",
+    "Databricks Associate DE exam V3/Data Governance.md",
+    "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
     "Databricks Associate DE exam V3/Exam outline.md",
     "Databricks Associate DE exam V3/images/Pasted image 20230924224721.png",
     "Databricks Associate DE exam V3/ELT With Spark SQL and Python.md",
     "Databricks Associate DE exam V3/images/Pasted image 20230924224438.png",
     "Databricks Associate DE exam V3/images",
-    "Daily notes/2023-09-24.md",
     "Databricks Associate DE exam V3/Incremental Data Processing.md",
     "Databricks Associate DE exam V3/Production Pipelines.md",
     "ELT With Spark SQL and Python.pdf",
