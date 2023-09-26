@@ -4,37 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "9239eb4b1e19b3f8",
+        "id": "e7d181294cc0e24e",
         "type": "tabs",
         "children": [
           {
-            "id": "cdf803f47850efd1",
+            "id": "21eba09cedec2709",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Databricks Associate DE exam V3/Data Governance.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "4c0f9004edbb38d3",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "bdeffbb488429b2b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Databricks Associate DE exam V3/Incremental Data Processing.md",
-                "mode": "preview",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -103,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Databricks Associate DE exam V3/Data Governance.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Databricks Associate DE exam V3/Data Governance.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Databricks Associate DE exam V3/Data Governance.md"
-              }
+              "state": {}
             }
           },
           {
@@ -174,14 +148,14 @@
       "obsidian-statusbar-pomo:Start pomodoro": false
     }
   },
-  "active": "cdf803f47850efd1",
+  "active": "21eba09cedec2709",
   "lastOpenFiles": [
+    "Databricks Associate DE exam V3/Data Governance.md",
     "Databricks Associate DE exam V3/Production Pipelines.md",
     "Databricks Associate DE exam V3/Exam outline.md",
     "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
     "Databricks Associate DE exam V3/ELT With Spark SQL and Python.md",
     "Databricks Associate DE exam V3/Incremental Data Processing.md",
-    "Databricks Associate DE exam V3/Data Governance.md",
     "Daily notes/2023-09-26.md",
     "Data Governance.pdf",
     "Daily notes/2023-09-24.md",
