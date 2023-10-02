@@ -13,3 +13,4 @@
 [Exam topics](https://www.examtopics.com/exams/databricks/certified-data-engineer-associate/view/)
 [Data Master](https://www.youtube.com/watch?v=gD75ONmT9c0&list=PL7S7dD8r4QdVnjXJQ3aObQPWjlaZwRVDo&index=1)
 [Official sample/test exam](https://files.training.databricks.com/assessments/practice-exams/PracticeExam-DataEngineerAssociate.pdf)
+[Databricks Academy](https://customer-academy.databricks.com/learn/course/1266/data-engineering-with-databricks-v3)
