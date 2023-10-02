@@ -42,10 +42,10 @@
 
 6. Identify why Auto Loader has inferred all data to be STRING from a JSON source [1](https://docs.databricks.com/en/ingestion/auto-loader/schema.html)
 	- JSON inputs do not enforce schemas natively. To avoid schema mismatch, it is initially inferred as string. Same case with CSVs. For Avro/Parquet, schema is included with the input file.
-
-7. Identify the default behavior of a constraint violation
+	<br />
+1. Identify the default behavior of a constraint violation
 	- Default behavior is to record the violating records ONLY (`dlt.expect`)
-8. Identify the impact of ON VIOLATION DROP ROW and ON VIOLATION FAIL UPDATE for a constraint violation
+2. Identify the impact of ON VIOLATION DROP ROW and ON VIOLATION FAIL UPDATE for a constraint violation
 	- `dlt.expect_or_fail` fails the pipeline at this step
 	- `dlt.expect_or_drop` drops the row with violation
 	```Python

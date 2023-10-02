@@ -71,23 +71,23 @@ For the `${var}` syntaxing, refer to Databricks widgets, which is a way to regis
 	SELECT count(*) FROM users WHERE email IS NULL;
 	```
 8. Identify how the count(row) skips NULL values.
-	- count(*) counts all regardless of nulls
-	- count(col) disregards nulls in that column
+	- `count(*)` counts all regardless of nulls
+	- `count(col)` disregards nulls in that column
 	<br />
 9. Deduplicate rows from an existing Delta Lake table.
-	- DISTINCT(*)
+	- `DISTINCT(*)`
 	<br />
 10. Create a new table from an existing table while removing duplicate rows.
 	- CTAS (`CREATE TABLE AS ...`) statement with DISTINCT or GROUP BY
 	<br />
 11. Deduplicate a row based on specific columns.
-	- GROUP BY specific columns to only dedup based on specific columns. (Need to use aggregate functions with other columns -MAX, MIN, etc )
+	- `GROUP BY` specific columns to only dedup based on specific columns. (Need to use aggregate functions with other columns - `MAX`, `MIN`, etc )
 	<br />
 12. Validate that the primary key is unique across all rows.
-	- GROUP BY pkey then count if each pkey value occurs only once
+	- `GROUP BY pkey` then count if each pkey value occurs only once
 	<br />
 13. Validate that a field is associated with just one unique value in another field.
-	- GROUP BY field 1 and count if there is only one occurence in the other field
+	- `GROUP BY field 1` and count if there is only one occurence in the other field
 	<br />
 14. Validate that a value is not present in a specific field.
 	- `WHERE column = value` should return no rows
@@ -116,15 +116,15 @@ For the `${var}` syntaxing, refer to Databricks widgets, which is a way to regis
 	SELECT items[0], items[1] FROM array_sample;
 	```
 19. Identify the benefits of using array functions.
-	- explode() - array elements split into several rows
-	- size() - counts the number of elements in array
-	- collect_set() - aggregate function that collects all unique values into an array, including arrays themselves
-	- flatten() - combines an array of arrays into a single array
-	- array_distinct() - select distinct inside an array
+	- `explode()` - array elements split into several rows
+	- `size()` - counts the number of elements in array
+	- `collect_set()` - aggregate function that collects all unique values into an array, including arrays themselves
+	- `flatten()` - combines an array of arrays into a single array
+	- `array_distinct()` - select distinct inside an array
 	<br />
 20. Parse JSON strings into structs.
-	- schema_of_json() - returns schema based on sample json string
-	- from_json() - parses column with json string into a table schema. requires input schema, which can be taken from schema_of_json()
+	- `schema_of_json()` - returns schema based on sample json string
+	- `from_json()` - parses column with json string into a table schema. requires input schema, which can be taken from schema_of_json()
 	<br />
 21. Identify which result will be returned based on a join query. [[1](https://docs.gcp.databricks.com/sql/language-manual/sql-ref-syntax-qry-select-join.html), [2](https://stackoverflow.com/questions/21738784/difference-between-inner-join-and-left-semi-join)]
 	- review basic joins (left, right, inner, outer) and complex joins (semi, cross, anti)
