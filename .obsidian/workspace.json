@@ -4,15 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "e7d181294cc0e24e",
+        "id": "9e7dc3c95239c052",
         "type": "tabs",
+        "dimension": 46.070460704607044,
         "children": [
           {
-            "id": "21eba09cedec2709",
+            "id": "1f8812c5d6a50f9c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Databricks Associate DE exam V3/Production Pipelines.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "75ce0a5ea0d8eaf8",
+        "type": "tabs",
+        "dimension": 53.929539295392956,
+        "children": [
+          {
+            "id": "257f37020ab0bfb7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Databricks Associate DE exam V3/Production Pipelines.md",
+                "mode": "preview",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Databricks Associate DE exam V3/Production Pipelines.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Databricks Associate DE exam V3/Production Pipelines.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +144,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Databricks Associate DE exam V3/Production Pipelines.md"
+              }
             }
           },
           {
@@ -148,19 +176,28 @@
       "obsidian-statusbar-pomo:Start pomodoro": false
     }
   },
-  "active": "21eba09cedec2709",
+  "active": "139e2635df272e0d",
   "lastOpenFiles": [
-    "Databricks Associate DE exam V3/Data Governance.md",
-    "Databricks Associate DE exam V3/Production Pipelines.md",
     "Databricks Associate DE exam V3/Exam outline.md",
+    "Databricks Associate DE exam V3/Production Pipelines.md",
+    "Daily notes/2023-10-02.md",
+    "Databricks Associate DE exam V3/images/Pasted image 20231002141953.png",
+    "Databricks Associate DE exam V3/images/Pasted image 20231002142401.png",
+    "Databricks Associate DE exam V3/images/Pasted image 20231002142320.png",
+    "Databricks Associate DE exam V3/images/Pasted image 20231002141934.png",
+    "Databricks Associate DE exam V3/images/Pasted image 20231002141217.png",
+    "Databricks Associate DE exam V3/images/Pasted image 20231002141231.png",
+    "Databricks Associate DE exam V3/images/Pasted image 20231002141321.png",
+    "Pasted image 20231002141846.png",
+    "Databricks Associate DE exam V3/images/Pasted image 20231002140901.png",
+    "Databricks Associate DE exam V3/images/Pasted image 20231002140717.png",
+    "Databricks Associate DE exam V3/Incremental Data Processing.md",
+    "Databricks Associate DE exam V3/Data Governance.md",
     "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
     "Databricks Associate DE exam V3/ELT With Spark SQL and Python.md",
-    "Databricks Associate DE exam V3/Incremental Data Processing.md",
-    "Daily notes/2023-09-26.md",
     "Data Governance.pdf",
+    "Daily notes/2023-09-26.md",
     "Daily notes/2023-09-24.md",
-    "Databricks Associate DE exam V3/images/Pasted image 20230924224721.png",
-    "Databricks Associate DE exam V3/images/Pasted image 20230924224438.png",
     "Databricks Associate DE exam V3/images",
     "ELT With Spark SQL and Python.pdf",
     "github.com/jtrangel.md",
