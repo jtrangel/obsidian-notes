@@ -14,8 +14,8 @@
               "type": "markdown",
               "state": {
                 "file": "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
-                "mode": "preview",
-                "source": false
+                "mode": "source",
+                "source": true
               }
             }
           },
@@ -63,12 +63,11 @@
               "state": {
                 "file": "Databricks Associate DE exam V3/Data Governance.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -134,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Databricks Associate DE exam V3/Data Governance.md",
+                "file": "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Databricks Associate DE exam V3/Data Governance.md",
+                "file": "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +173,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Databricks Associate DE exam V3/Data Governance.md"
+                "file": "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md"
               }
             }
           },
@@ -205,14 +204,14 @@
       "obsidian-statusbar-pomo:Start pomodoro": false
     }
   },
-  "active": "114acdcfb9e4578d",
+  "active": "c9686acb2856341e",
   "lastOpenFiles": [
+    "Databricks Associate DE exam V3/Data Governance.md",
     "Databricks Associate DE exam V3/Production Pipelines.md",
     "Databricks Associate DE exam V3/Incremental Data Processing.md",
-    "Databricks Associate DE exam V3/ELT With Spark SQL and Python.md",
     "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
+    "Databricks Associate DE exam V3/ELT With Spark SQL and Python.md",
     "Databricks Associate DE exam V3/Exam outline.md",
-    "Databricks Associate DE exam V3/Data Governance.md",
     "Daily notes/2023-10-02.md",
     "Databricks Associate DE exam V3/images/Pasted image 20231002153033.png",
     "Databricks Associate DE exam V3/images/Pasted image 20231002152925.png",
