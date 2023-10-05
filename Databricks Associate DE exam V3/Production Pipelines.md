@@ -6,12 +6,13 @@
 	- allows you to orchestrate processing/ingestion of data/tables
 	- allows isolation of each task and setting of dependencies between tasks
 	<br />
-1. Set up a predecessor task in Jobs.
+2. Set up a predecessor task in Jobs.
 	- aka dependencies
 	- use the **Depends on:** field to name a dependency.
 	- additionally can add custom run behavior using **Run if** field.
 		
 	![[Pasted image 20231002140717.png]]
+	
 	![[Pasted image 20231002140901.png]]
 	
 3. Identify a scenario in which a predecessor task should be set up.
@@ -44,6 +45,6 @@
 	![[Pasted image 20231002142401.png]]
 
 ## Additional Notes:
-- You can share data between tasks using **task values**. [1](https://docs.databricks.com/en/workflows/jobs/share-task-context.html) This is similar to XCOMs in Airflow. You can set task values inside the notebook.
+- You can share data between tasks using **task values**. [[1](https://docs.databricks.com/en/workflows/jobs/share-task-context.html)] This is similar to XCOMs in Airflow. You can set task values inside the notebook.
 
 - Creating an alert for a Job Task is separate from the **Alerts** tab on the left, which only alerts for queries.

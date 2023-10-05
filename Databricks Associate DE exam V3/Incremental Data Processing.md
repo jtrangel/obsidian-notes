@@ -36,16 +36,16 @@
 	    )
 	```
 
-5. Identify a scenario in which Auto Loader is beneficial. [1](https://docs.databricks.com/en/ingestion/auto-loader/index.html#benefits-of-auto-loader-over-using-structured-streaming-directly-on-files)
+5. Identify a scenario in which Auto Loader is beneficial. [[1](https://docs.databricks.com/en/ingestion/auto-loader/index.html#benefits-of-auto-loader-over-using-structured-streaming-directly-on-files)]
 	- optimised for file discovery in cloud native storage
 	- has schema evolution
 
-6. Identify why Auto Loader has inferred all data to be STRING from a JSON source [1](https://docs.databricks.com/en/ingestion/auto-loader/schema.html)
+6. Identify why Auto Loader has inferred all data to be STRING from a JSON source [[1](https://docs.databricks.com/en/ingestion/auto-loader/schema.html)]
 	- JSON inputs do not enforce schemas natively. To avoid schema mismatch, it is initially inferred as string. Same case with CSVs. For Avro/Parquet, schema is included with the input file.
 	<br />
-1. Identify the default behavior of a constraint violation
+7. Identify the default behavior of a constraint violation
 	- Default behavior is to record the violating records ONLY (`dlt.expect`)
-2. Identify the impact of ON VIOLATION DROP ROW and ON VIOLATION FAIL UPDATE for a constraint violation
+8. Identify the impact of ON VIOLATION DROP ROW and ON VIOLATION FAIL UPDATE for a constraint violation
 	- `dlt.expect_or_fail` fails the pipeline at this step
 	- `dlt.expect_or_drop` drops the row with violation
 	```Python
@@ -70,7 +70,7 @@
 	    )
 	```
 
-9. Explain change data capture and the behavior of APPLY CHANGES INTO [1](https://docs.databricks.com/en/delta-live-tables/cdc.html#:~:text=You%20can%20use%20change%20data,1%20to%20update%20records%20directly.)
+9. Explain change data capture and the behavior of APPLY CHANGES INTO [[1](https://docs.databricks.com/en/delta-live-tables/cdc.html#:~:text=You%20can%20use%20change%20data,1%20to%20update%20records%20directly.)]
 	- changes in source table data will consequently apply changes into target table 
 	- default is SCD type 1 (simply changing records)
 	```SQL
@@ -85,14 +85,14 @@
 	    apply_as_deletes = F.expr("operation = 'DELETE'"),
 	    except_column_list = ["operation", "source_file", "_rescued_data"])
 	```
-1. Query the events log to get metrics, perform audit logging, examine lineage. [1](https://docs.databricks.com/en/delta-live-tables/observability.html#:~:text=edit%20a%20pipeline.-,What%20is%20the%20Delta%20Live%20Tables%20event%20log%3F,state%20of%20your%20data%20pipelines.)
+10. Query the events log to get metrics, perform audit logging, examine lineage. [[1](https://docs.databricks.com/en/delta-live-tables/observability.html#:~:text=edit%20a%20pipeline.-,What%20is%20the%20Delta%20Live%20Tables%20event%20log%3F,state%20of%20your%20data%20pipelines.)]
 	```Python
 	display(
-		spark.sql(f"SELECT * FROM delta.`{D  A.paths.storage_location}/system/ events`"))    
+		spark.sql(f"SELECT * FROM delta.`{DA.paths.storage_location}/system/ events`"))    
 	```
 11. Troubleshoot DLT syntax: Identify which notebook in a DLT pipeline produced an error, identify the need for LIVE in create statement, identify the need for STREAM in from clause.
 	- for SQL, we need to use LIVE keyword to specify. for Python, we need to use the @dlt.table() decorator
 	- for SQL, we use `cloud_files()` or `STREAM()` in the FROM clause. for Python, we use `readStream()` and `dlt.read_stream()`
 		- Kung magbabasa palang sa source, we use `cloud_files()` and `readStream()`. Pero kung kapwa live table na ang babasahin, we use `STREAM()` and `dlt.read_stream()`.
 
-Info on this topic is slightly lacking, kasi GCP quota does not allow me to actually provision a workflow compute cluster (job compute). Parang bawal kasi na single node and gamitin, eh isa isa lang node na binibigay ni Google Kubernetes Engine (GKE).
+Info on this topic is slightly lacking, kasi GCP quota does not allow me to actually provision a workflow compute cluster (job compute). Parang bawal kasi na single node ang gamitin, eh isa isa lang node na binibigay ni Google Kubernetes Engine (GKE).

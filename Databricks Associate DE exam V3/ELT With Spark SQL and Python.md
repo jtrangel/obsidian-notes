@@ -2,7 +2,7 @@
 
 For the `${var}` syntaxing, refer to Databricks widgets, which is a way to register and use parameters in the SQL context. [[1](https://docs.databricks.com/en/notebooks/widgets.html)] Similarly we can invoke regular python variables for use with PySpark.
 
-1. Extract data from a single file and from a directory of files. [[1](https://docs.databricks.com/en/files/index.html)] 
+1. Extract data from a single file and from a directory of files. [[1](https://docs.databricks.com/en/files/index.html)]
 
 	```SQL
 	# Single file
@@ -17,6 +17,7 @@ For the `${var}` syntaxing, refer to Databricks widgets, which is a way to regis
 3. Create a view, a temporary view, and a CTE as a reference to a file
 	- View - saved query accessible from other notebooks. As long as the NB uses the same database and consequently the same catalog.
 	- Temp view - only persists within the spark session (within the notebook). Exception is if we use %run to reference another NB, which in turn gives us access to the environment variables of that other notebook.
+	- Global view - persists within the cluster, so it is accessible within other spark sessions on the same cluster
 	- CTE - only persists within the code cell
 
 	```SQL
@@ -124,7 +125,7 @@ For the `${var}` syntaxing, refer to Databricks widgets, which is a way to regis
 	<br />
 20. Parse JSON strings into structs.
 	- `schema_of_json()` - returns schema based on sample json string
-	- `from_json()` - parses column with json string into a table schema. requires input schema, which can be taken from schema_of_json()
+	- `from_json()` - parses column with json string into a table schema. requires input schema, which can be taken from `schema_of_json()`.
 	<br />
 21. Identify which result will be returned based on a join query. [[1](https://docs.gcp.databricks.com/sql/language-manual/sql-ref-syntax-qry-select-join.html), [2](https://stackoverflow.com/questions/21738784/difference-between-inner-join-and-left-semi-join)]
 	- review basic joins (left, right, inner, outer) and complex joins (semi, cross, anti)

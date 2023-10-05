@@ -67,13 +67,13 @@
 
 This section on Delta Lake overlaps with [[ELT With Spark SQL and Python]].
 
-1. Identify where Delta Lake provides ACID transactions. [1](https://docs.databricks.com/en/lakehouse/acid.html)
+1. Identify where Delta Lake provides ACID transactions. [[1](https://docs.databricks.com/en/lakehouse/acid.html)]
 	- Transactions are at the table level, one table at a time
 	- [Optimistic concurrency control](https://en.wikipedia.org/wiki/Optimistic_concurrency_control) for concurrent transactions
 		- BEGIN -> Modify -> Validate -> Commit/Rollback
 	- Databricks has no BEGIN/END syntax like TSQL. Changes are made in a serial manner (1 at a time ata meaning neto)
 	<br />
-2. Identify the benefits of ACID transactions. [1](https://www.databricks.com/glossary/acid-transactions#:~:text=Why%20are%20ACID%20transactions%20a,operation%20that%20only%20partially%20completes.)
+2. Identify the benefits of ACID transactions. [[1](https://www.databricks.com/glossary/acid-transactions#:~:text=Why%20are%20ACID%20transactions%20a,operation%20that%20only%20partially%20completes.)]
 	- 'Highest possible data reliability and integrity'
 	<br />
 3. Identify whether a transaction is ACID-compliant.
@@ -95,12 +95,12 @@ This section on Delta Lake overlaps with [[ELT With Spark SQL and Python]].
 	DESCRIBE TABLE EXTENDED <table-name>;
 	```
 
-5. Compare and contrast managed and external tables. [1](https://docs.databricks.com/en/data-governance/unity-catalog/create-tables.html)
+5. Compare and contrast managed and external tables. [[1](https://docs.databricks.com/en/data-governance/unity-catalog/create-tables.html)]
 	- managed tables - made within databricks via DDL
 	- external tables - any tables with external data, regardless of where it is stored (dbfs, abfss, adls, s3).
 	- when dropping managed, data and metadata is lost. when dropping external, only metadata is lost.
 	<br />
-6. Identify a scenario to use an external table. [1](https://learn.microsoft.com/en-us/azure/databricks/data-governance/unity-catalog/create-tables)
+6. Identify a scenario to use an external table. [[1](https://learn.microsoft.com/en-us/azure/databricks/data-governance/unity-catalog/create-tables)]
 	- when you need direct access to data outside of Databricks clusters/SQL warehouses (avoid data egress from external source)
 	```SQL
 	# Sample syntax
@@ -169,7 +169,7 @@ This section on Delta Lake overlaps with [[ELT With Spark SQL and Python]].
 	```SQL
 	VACUUM students RETAIN 0 HOURS
 	```
-17. Identify the kind of files Optimize compacts. [1](https://docs.gcp.databricks.com/sql/language-manual/delta-optimize.html)
+17. Identify the kind of files Optimize compacts. [[1](https://docs.gcp.databricks.com/sql/language-manual/delta-optimize.html)]
 	- small files are compacted and balanced out (combined towards an optimal size, determined by table size)
 	- idempotent process
 	<br />
