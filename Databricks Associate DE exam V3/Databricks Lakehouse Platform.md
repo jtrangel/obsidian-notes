@@ -14,12 +14,12 @@
 	<br />
 3. Compare and contrast silver and gold tables, which workloads will use a bronze table as a source, which workloads will use a gold table as a source. [[1](https://docs.databricks.com/en/lakehouse/medallion.html#silver)] 
 	- Bronze = raw data. Also known as **Information**
-	- Silver = enrich tables via validation and dedup
+	- Silver = enrich tables via validation and dedup. Can also join columns/tables together for better info.
 	- Gold = business level aggregates that were refined from silver. Also known as **Knowledge**
 	<br />
 4. Identify elements of the Databricks Platform Architecture, such as what is located in the data plane versus the control plane and what resides in the customer’s cloud account. [[1](https://docs.databricks.com/en/getting-started/overview.html)] 
-	- Control plane - backend of Databricks consisting of Notebooks, workspace config, clusters
-	- Data plane - where data is processed (i.e. EC2, Azure/GCP VMs) and stored (i.e. S3, Azure Blob)
+	- Control plane - backend of Databricks consisting of Notebooks, workspace config, clusters, web GUI, VM management
+	- Data plane - where data is processed (i.e. EC2, Azure/GCP VMs) and stored (i.e. S3, Azure Blob), VMs
 	<br />
 5. Differentiate between all-purpose clusters and jobs clusters. [[1](https://docs.databricks.com/en/clusters/index.html)]
 	- All purpose clusters - Continuously running, best for dev sessions
@@ -55,7 +55,8 @@
 	- Several CI/CD functionality is available by integrating with a tool like Github Actions (Call Repos API to automate)
 	<br />
 14. Identify Git operations available via Databricks Repos. [[1](https://docs.databricks.com/en/repos/git-operations-with-repos.html)]
-	- Commit, Push, Pull, Merge, Rebase, and create branches
+	- Commit, Push, Pull, Merge, Rebase, Reset, and create branches
+	- **NOTE**: As of Oct 2023, Rebase and Reset are currently experimental/preview features in the exam context. They are considered as not part of available git operations when asked in the exam.
 	<br />
 15. Identify limitations in Databricks Notebooks version control functionality relative to Repos. [[1](https://docs.databricks.com/en/repos/git-version-control-legacy.html), [2](https://www.examtopics.com/discussions/databricks/view/104744-exam-certified-data-engineer-associate-topic-1-question-10/#:~:text=An%20advantage%20of%20using%20Databricks%20Repos%20over%20the%20built%2Din,Databricks%20Repos%20is%20built%20upon.)]
 
@@ -68,7 +69,7 @@ This section on Delta Lake overlaps with [[ELT With Spark SQL and Python]].
 
 1. Identify where Delta Lake provides ACID transactions. [1](https://docs.databricks.com/en/lakehouse/acid.html)
 	- Transactions are at the table level, one table at a time
-	- (Optimistic concurrency control)[https://en.wikipedia.org/wiki/Optimistic_concurrency_control] for concurrent transactions
+	- [Optimistic concurrency control](https://en.wikipedia.org/wiki/Optimistic_concurrency_control) for concurrent transactions
 		- BEGIN -> Modify -> Validate -> Commit/Rollback
 	- Databricks has no BEGIN/END syntax like TSQL. Changes are made in a serial manner (1 at a time ata meaning neto)
 	<br />
@@ -128,6 +129,7 @@ This section on Delta Lake overlaps with [[ELT With Spark SQL and Python]].
 	```Python
 	display(dbutils.fs.ls(f"{path}/table"))
 	```
+	
 ![[Pasted image 20230924224438.png]]
 10. Identify who has written previous versions of a table.
 11. Review a history of table transactions. 
@@ -148,7 +150,7 @@ This section on Delta Lake overlaps with [[ELT With Spark SQL and Python]].
 	RESTORE TABLE students TO VERSION AS OF 8
 	```
 15. Identify why Zordering is beneficial to Delta Lake tables.
-	- z-ordering = indexing
+	- z-ordering = indexing for delta tables (afaik, only works on delta tables). For parquet, you can convert them first to `DELTA` format.
 	```SQL
 	OPTIMIZE students
 	ZORDER BY id
@@ -172,7 +174,7 @@ This section on Delta Lake overlaps with [[ELT With Spark SQL and Python]].
 	- idempotent process
 	<br />
 18. Identify CTAS (`CREATE TABLE AS SELECT`) as a solution.
-	- autoinfer schema from input
+	- autoinfer schema from input (only works for sources with well defined schema, i.e. parquet/existing tables)
 	- does not support `OPTIONS`  for csvs
 		- you will need to use temp views first with options, then reference the view in CTAS
 		- `CREATE OR REPLACE TEMP VIEW.... USING CSV ... OPTIONS...`

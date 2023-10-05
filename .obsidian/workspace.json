@@ -49,8 +49,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Databricks Associate DE exam V3/Data Governance.md",
-                "mode": "preview",
+                "file": "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Databricks Associate DE exam V3/Data Governance.md"
+                "file": "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md"
               }
             }
           },
@@ -151,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Databricks Associate DE exam V3/Data Governance.md",
+                "file": "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,7 +168,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Databricks Associate DE exam V3/Data Governance.md",
+                "file": "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -195,6 +195,7 @@
   },
   "active": "8e0f62b783480b2f",
   "lastOpenFiles": [
+    "Databricks Associate DE exam V3/Data Governance.md",
     "Data Governance.pdf",
     "Databricks Associate DE exam V3/Production Pipelines.md",
     "Production Pipelines.pdf",
@@ -206,7 +207,6 @@
     "Databricks Lakehouse Platform.pdf",
     "Databricks Associate DE exam V3/Exam outline.md",
     "Exam outline.pdf",
-    "Databricks Associate DE exam V3/Data Governance.md",
     "Daily notes/2023-09-26.md",
     "Daily notes/2023-10-02.md",
     "2023-10-02.md",
