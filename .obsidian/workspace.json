@@ -8,53 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "06ba2fb4b10b0daa",
+            "id": "4075f847d88ef0b2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Databricks Associate DE exam V3/Exam outline.md",
-                "mode": "preview",
+                "file": "LearningSpark/Rationale.md",
+                "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "609857c6b001b8dd",
+            "id": "73590d0ab8869c3e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
-                "mode": "preview",
+                "file": "LearningSpark/1. Intro to Apache Spark, A Unified Analytics Engine.md",
+                "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "ddab255338c47690",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Databricks Associate DE exam V3/ELT With Spark SQL and Python.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8e0f62b783480b2f",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "PDFs/Data Governance.pdf"
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -131,7 +109,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PDFs/Data Governance.pdf"
+                "file": "LearningSpark/1. Intro to Apache Spark, A Unified Analytics Engine.md"
               }
             }
           },
@@ -149,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PDFs/Data Governance.pdf",
+                "file": "LearningSpark/1. Intro to Apache Spark, A Unified Analytics Engine.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PDFs/Data Governance.pdf",
+                "file": "LearningSpark/1. Intro to Apache Spark, A Unified Analytics Engine.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -191,18 +169,21 @@
       "obsidian-statusbar-pomo:Start pomodoro": false
     }
   },
-  "active": "139e2635df272e0d",
+  "active": "73590d0ab8869c3e",
   "lastOpenFiles": [
+    "LearningSpark/Rationale.md",
+    "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
+    "Databricks Associate DE exam V3/ELT With Spark SQL and Python.md",
+    "LearningSpark/1. Intro to Apache Spark, A Unified Analytics Engine.md",
+    "PDFs/Data Governance.pdf",
+    "LearningSpark",
     "Daily notes/2023-10-06.md",
     "PDFs/Production Pipelines.pdf",
     "Databricks Associate DE exam V3/images/Pasted image 20231005214708.png",
     "Daily notes/2023-10-05.md",
-    "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
     "PDFs",
     "Databricks Associate DE exam V3/Data Governance.md",
-    "PDFs/Data Governance.pdf",
     "Databricks Associate DE exam V3/Production Pipelines.md",
-    "Databricks Associate DE exam V3/ELT With Spark SQL and Python.md",
     "PDFs/ELT With Spark SQL and Python.pdf",
     "Databricks Associate DE exam V3/Incremental Data Processing.md",
     "PDFs/Incremental Data Processing.pdf",
@@ -225,7 +206,6 @@
     "Databricks Associate DE exam V3/images",
     "github.com/jtrangel.md",
     "github.com",
-    "Daily notes",
     "README.md"
   ]
 }
