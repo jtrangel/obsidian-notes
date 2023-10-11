@@ -4,58 +4,57 @@
     "type": "split",
     "children": [
       {
-        "id": "e53f18f6106533b5",
+        "id": "e58f5df9649cd22a",
         "type": "tabs",
         "children": [
           {
-            "id": "c9686acb2856341e",
+            "id": "06ba2fb4b10b0daa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Databricks Associate DE exam V3/Exam outline.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "609857c6b001b8dd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "6402538b5105426a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Databricks Associate DE exam V3/Incremental Data Processing.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "093288dd25b726ba",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Databricks Associate DE exam V3/Production Pipelines.md",
                 "mode": "preview",
-                "source": true
+                "source": false
               }
             }
           },
           {
-            "id": "114acdcfb9e4578d",
+            "id": "ddab255338c47690",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Databricks Associate DE exam V3/Data Governance.md",
+                "file": "Databricks Associate DE exam V3/ELT With Spark SQL and Python.md",
                 "mode": "preview",
-                "source": true
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8e0f62b783480b2f",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "PDFs/Data Governance.pdf"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -116,35 +115,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ef643821dfd7ce09",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "c408bbe08f3e0140",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
             "id": "e5d07476eb1ab4cb",
             "type": "leaf",
             "state": {
@@ -161,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md"
+                "file": "PDFs/Data Governance.pdf"
               }
             }
           },
@@ -172,13 +142,42 @@
               "type": "git-view",
               "state": {}
             }
+          },
+          {
+            "id": "65a641f80126040c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "PDFs/Data Governance.pdf",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1295d58e6306c959",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "PDFs/Data Governance.pdf",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 333.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -192,40 +191,41 @@
       "obsidian-statusbar-pomo:Start pomodoro": false
     }
   },
-  "active": "c9686acb2856341e",
+  "active": "139e2635df272e0d",
   "lastOpenFiles": [
-    "2023-10-06.md",
-    "Production Pipelines.pdf",
-    "Daily notes/2023-10-05.md",
+    "Daily notes/2023-10-06.md",
+    "PDFs/Production Pipelines.pdf",
     "Databricks Associate DE exam V3/images/Pasted image 20231005214708.png",
-    "Databricks Associate DE exam V3/ELT With Spark SQL and Python.md",
-    "Databricks Associate DE exam V3/Incremental Data Processing.md",
-    "Databricks Associate DE exam V3/Data Governance.md",
-    "Databricks Associate DE exam V3/Production Pipelines.md",
+    "Daily notes/2023-10-05.md",
     "Databricks Associate DE exam V3/Databricks Lakehouse Platform.md",
-    "Databricks Lakehouse Platform.pdf",
-    "Incremental Data Processing.pdf",
-    "Exam outline.pdf",
-    "ELT With Spark SQL and Python.pdf",
-    "Data Governance.pdf",
+    "PDFs",
+    "Databricks Associate DE exam V3/Data Governance.md",
+    "PDFs/Data Governance.pdf",
+    "Databricks Associate DE exam V3/Production Pipelines.md",
+    "Databricks Associate DE exam V3/ELT With Spark SQL and Python.md",
+    "PDFs/ELT With Spark SQL and Python.pdf",
+    "Databricks Associate DE exam V3/Incremental Data Processing.md",
+    "PDFs/Incremental Data Processing.pdf",
+    "PDFs/Databricks Lakehouse Platform.pdf",
     "Databricks Associate DE exam V3/Exam outline.md",
+    "PDFs/Exam outline.pdf",
+    "Daily notes/2023-09-26.md",
     "Daily notes/2023-10-02.md",
+    "2023-10-02.md",
     "Databricks Associate DE exam V3/images/Pasted image 20231002153033.png",
     "Databricks Associate DE exam V3/images/Pasted image 20231002152925.png",
     "Databricks Associate DE exam V3/images/Pasted image 20231002152745.png",
     "Databricks Associate DE exam V3/images/Pasted image 20231002151809.png",
     "Databricks Associate DE exam V3/images/Pasted image 20231002150143.png",
     "Databricks Associate DE exam V3/images/Pasted image 20231002144943.png",
-    "Databricks Associate DE exam V3/images/Pasted image 20231002142401.png",
-    "Databricks Associate DE exam V3/images/Pasted image 20231002142320.png",
+    "Pasted image 20231002144919.png",
     "Databricks Associate DE exam V3/images/Pasted image 20231002141953.png",
-    "Daily notes/2023-09-26.md",
+    "Databricks Associate DE exam V3/images/Pasted image 20231002142401.png",
     "Daily notes/2023-09-24.md",
     "Databricks Associate DE exam V3/images",
     "github.com/jtrangel.md",
     "github.com",
     "Daily notes",
-    "README.md",
-    "Databricks Associate DE exam V3"
+    "README.md"
   ]
 }
